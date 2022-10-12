@@ -1,5 +1,11 @@
 # Chapter 1: Your first app
 
+It's time to launch our first app! This is a basic client-server app written in NodeJS. The server should run continuously and
+respond to periodic requests from the client app.
+
+The code is already done (enough) for our launch, so all you need to do is deploy it in GKE. Follow the guide below to point you
+to the code and get the app running.
+
 ## Objective
 
 By the end of this chapter you will have a basic sample app deployed in your cluster.
@@ -12,10 +18,21 @@ Open a new terminal window to do the tasks in this chapter.
 
 First, make sure you [have `kubectl` installed and can connect to your GKE cluster](https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl).
 
-Build the [NodeJS sample app](../../sample-apps/nodejs) with the following commands:
+Navigate to the [NodeJS sample app](../../sample-apps/nodejs):
 
 ```
 cd ../../sample-apps/nodejs
+```
+
+Create an Artifact Registry container image repository (if you don't already have one):
+
+```
+make setup
+```
+
+Build the sample apps:
+
+```
 make build
 make push
 ```

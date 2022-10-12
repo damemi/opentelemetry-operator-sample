@@ -5,6 +5,10 @@ with the OpenTelemetry Operator. Each chapter uses the [sample apps](../sample-a
 [recipes](../recipes) from this repo to build a realistic scenario in which those samples
 could be applied.
 
+In this story you assume the role of the new technical lead at a fledgling startup, FooCo. The
+company is excited to launch and grow, and it's your job to help that go smoothly using
+OpenTelemetry.
+
 The chapters are roughly organized into the following sections:
 
 ## Section 1 - Background

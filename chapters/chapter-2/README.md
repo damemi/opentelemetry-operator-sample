@@ -1,8 +1,16 @@
 # Chapter 2: Your first trace
 
+Some of our users are complaining about high latency in our product. But, we're not sure whether this latency is coming from the
+client or the server. Our logs aren't much help, and besides we don't want to fill up our log storage with debug messages.
+We need a way to diagnose which of our microservices is having trouble.
+
+When they pulled your predecessor from the ratite enclosure, she was muttering something about "tracing." No one else here at
+FooCo knows what that means, but we found this guide among her effects that looks to be helpful. Follow it to set up tracing
+and see if that helps pinpoint the issue.
+
 ## Objective
 
-Learn how to manually and semi-automatically instrument basic tracing.
+Learn how to manually instrument tracing.
 
 ## Tasks
 
@@ -88,3 +96,11 @@ kubectl port-forward service/jaeger-query -n observability 16686
 ```
 
 Then open your browser and navigate to `localhost:16686`.
+
+## Summary
+
+You have saved the day. Now that we know where the issue is, we can adjust our SLOs to match. Now our users will be happy!
+
+But, it is kind of a pain now that we have to manage this Jaeger instance ourselves. Our team is considering switching
+to [Cloud Trace](https://cloud.google.com/trace) as our backend, and we're hoping you can make that switch without
+any downtime. You should be able to do that in [Chapter 3](../chapter-3).
